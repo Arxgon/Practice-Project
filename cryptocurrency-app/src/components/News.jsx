@@ -35,7 +35,7 @@ const News = ({ simplified }) => {
               option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
             }
           >
-            <Option value="Cryptocurency">Cryptocurrency</Option>
+            <Option value="Cryptocurrency">Cryptocurrency</Option>
             {data?.data?.coins?.map((currency) => (
               <Option value={currency.name}>{currency.name}</Option>
             ))}
@@ -51,6 +51,7 @@ const News = ({ simplified }) => {
                   {news.name}
                 </Title>
                 <img
+                  style={{ maxWidth: "200px", maxHeight: "100px" }}
                   src={news?.image?.thumbnail?.contentUrl || demoImage}
                   alt=""
                 />
